@@ -7,6 +7,7 @@ def download_ieee_fraud():
     data_dir = Path("data/raw")
     data_dir.mkdir(parents=True, exist_ok=True) 
     print("Downloading the dataset - IEEE-CIS Fraud Detection ...")
+    # Download all available files for the competition named ieee-fraud-detection into raw.”
     subprocess.run(["kaggle", "competitions", "download","-c",
                      "ieee-fraud-detection", "-p", str(data_dir)], check=True)
     
